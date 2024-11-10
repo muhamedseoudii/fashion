@@ -21,6 +21,11 @@ class IconAssets {
   static const String filterIcon = "$iconPath/filter.svg";
   static const String locationIcon = "$iconPath/location.svg";
   static const String notificationIcon = "$iconPath/notification.svg";
+  static const String dressIcon = "$iconPath/dress.svg";
+  static const String jacketIcon = "$iconPath/jacket.svg";
+  static const String pantIcon = "$iconPath/pant.svg";
+  static const String tshirtIcon = "$iconPath/tshirt.svg";
+  static const String starIcon = "$iconPath/Star.svg";
 }
 
 class JsonAssets {

@@ -171,9 +171,8 @@ abstract class AppTextStyles {
   static const mediumTitle12 =
       TextStyle(fontSize: 12, fontWeight: FontWeight.w600);
   static const smallTitle12 = TextStyle(
-    color: Color(0xff1F2029),
     fontSize: 12,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
   );
   static const smallTitleWhite12 = TextStyle(
     color: Colors.white,
