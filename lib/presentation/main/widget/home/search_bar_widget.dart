@@ -23,7 +23,7 @@ class SearchBarWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SizedBox(
-          width: 300,
+          width: 260,
           child: SearchTextField(
             fillColor: ColorManager.white,
             hintText: "Search",

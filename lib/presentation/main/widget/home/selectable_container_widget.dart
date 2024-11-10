@@ -12,18 +12,18 @@ class SelectableContainerList extends StatefulWidget {
 
 class _SelectableContainerListState extends State<SelectableContainerList> {
   List name = [
-    {"title":"All"},
-    {"title":"Newest"},
-    {"title":"Popular"},
-    {"title":"Man"},
-    {"title":"Woman"},
+    {"title": "All"},
+    {"title": "Newest"},
+    {"title": "Popular"},
+    {"title": "Man"},
+    {"title": "Woman"},
   ];
   int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 54,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: name.length,

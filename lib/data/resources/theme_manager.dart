@@ -26,15 +26,15 @@ ThemeData getApplicationTheme() {
     appBarTheme: AppBarTheme(
       // iconTheme: const IconThemeData(color: Colors.white),
       toolbarHeight: 90,
-      centerTitle: false,
+      centerTitle: true,
       color: ColorManager.white,
       elevation: AppSize.s0,
       shadowColor: ColorManager.lightPrimary,
       titleTextStyle: TextStyle(
           fontFamily: FontConstants.fontFamily,
           fontSize: FontSize.s16,
-          color: ColorManager.white,
-          fontWeight: FontWeight.w700),
+          color: ColorManager.black,
+          fontWeight: FontWeight.w500),
     ),
 
     //button theme

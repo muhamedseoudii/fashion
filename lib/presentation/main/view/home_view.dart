@@ -24,7 +24,6 @@ class _HomeViewState extends State<HomeView> {
   List<bool> selectedItems = List.generate(4, (index) => false);
   @override
   Widget build(BuildContext context) {
-
     final List category = [
       {"icons": IconAssets.tshirtIcon, "title": "T-Shirt"},
       {"icons": IconAssets.pantIcon, "title": "Pants"},
@@ -61,7 +60,7 @@ class _HomeViewState extends State<HomeView> {
                             children: [
                               CircleAvatar(
                                   backgroundColor: ColorManager.secandary,
-                                  radius: 35,
+                                  radius: 30,
                                   child: SvgPicture.asset(
                                       category[index]["icons"])),
                               const SizedBox(height: 6),

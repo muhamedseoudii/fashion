@@ -26,6 +26,15 @@ class IconAssets {
   static const String pantIcon = "$iconPath/pant.svg";
   static const String tshirtIcon = "$iconPath/tshirt.svg";
   static const String starIcon = "$iconPath/Star.svg";
+  static const String editIcon = "$iconPath/edit.svg";
+  static const String cardIcon = "$iconPath/card.svg";
+  static const String clipboardTextIcon = "$iconPath/clipboardText.svg";
+  static const String infoCircleIcon = "$iconPath/infoCircle.svg";
+  static const String lockIcon = "$iconPath/lock.svg";
+  static const String logoutIcon = "$iconPath/logout.svg";
+  static const String profileAddIcon = "$iconPath/profileAdd.svg";
+  static const String settingIcon = "$iconPath/setting.svg";
+  static const String userIcon = "$iconPath/user.svg";
 }
 
 class JsonAssets {

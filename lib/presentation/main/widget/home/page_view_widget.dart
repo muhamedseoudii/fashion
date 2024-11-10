@@ -18,42 +18,45 @@ class PageViewWidget extends StatelessWidget {
           child: PageView(
             controller: pageController,
             children: List.generate(4, (index) {
-              return Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: ColorManager.secandary,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "New Collection",
-                      style: AppTextStyles.largeTitle18,
-                    ),
-                    const Text(
-                      "Discount 50% for \nthe first transaction",
-                      style: AppTextStyles.smallTitleGrey12,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 26,
-                        width: 83,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: ColorManager.primary,
-                        ),
-                        child: const Text(
-                          "Shop Now",
-                          style: AppTextStyles.smallTitleWhite12,
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: ColorManager.secandary,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "New Collection",
+                        style: AppTextStyles.largeTitle18,
+                      ),
+                      const Text(
+                        "Discount 50% for \nthe first transaction",
+                        style: AppTextStyles.smallTitleGrey12,
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          alignment: Alignment.center,
+                          height: 26,
+                          width: 83,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: ColorManager.primary,
+                          ),
+                          child: const Text(
+                            "Shop Now",
+                            style: AppTextStyles.smallTitleWhite12,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               );
             }),
