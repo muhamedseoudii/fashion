@@ -5,7 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:slide_countdown/slide_countdown.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../widget/home/grid_items_wigdet.dart';
 import '../widget/home/home_header_widget.dart';

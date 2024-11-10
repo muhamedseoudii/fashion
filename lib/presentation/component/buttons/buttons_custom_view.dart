@@ -1,7 +1,6 @@
 import 'package:fashion/data/resources/color_manager.dart';
 import 'package:fashion/data/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class FilledButtomEdit extends StatelessWidget {
   final String text;

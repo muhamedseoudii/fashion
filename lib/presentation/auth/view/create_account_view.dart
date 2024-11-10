@@ -18,7 +18,6 @@ class CreateAccountView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
-    bool value = false;
     return Scaffold(
       body: SafeArea(
         child: ListView(
