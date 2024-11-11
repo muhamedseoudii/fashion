@@ -35,6 +35,11 @@ class IconAssets {
   static const String profileAddIcon = "$iconPath/profileAdd.svg";
   static const String settingIcon = "$iconPath/setting.svg";
   static const String userIcon = "$iconPath/user.svg";
+  static const String appleIcon = "$iconPath/apple.svg";
+  static const String cardFillIcon = "$iconPath/cardFill.svg";
+  static const String keyIcon = "$iconPath/key.svg";
+  static const String paypalIcon = "$iconPath/paypal.svg";
+  static const String trashIcon = "$iconPath/trash.svg";
 }
 
 class JsonAssets {

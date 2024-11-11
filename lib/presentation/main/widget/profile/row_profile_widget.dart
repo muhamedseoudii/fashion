@@ -21,7 +21,7 @@ class RowProfileWidget extends StatelessWidget {
             children: [
               SvgPicture.asset(icon),
               const SizedBox(width: 12),
-              Text(title, style: AppTextStyles.largeTitle18),
+              Text(title, style: AppTextStyles.mediumTitle14),
             ],
           ),
           const Icon(Icons.arrow_forward_ios)

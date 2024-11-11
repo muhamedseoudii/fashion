@@ -7,8 +7,12 @@ import 'package:fashion/presentation/intro/welcome/welcome_view.dart';
 import 'package:fashion/presentation/location/veiw/location_view.dart';
 import 'package:fashion/presentation/location/veiw/manual_location_view.dart';
 import 'package:fashion/presentation/main/screen/main_screen_view.dart';
+import 'package:fashion/presentation/profile_ui/view/password_manager_view.dart';
+import 'package:fashion/presentation/profile_ui/view/payment_method_view.dart';
+import 'package:fashion/presentation/profile_ui/view/settings_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../presentation/main/view/home_view.dart';
 import '../../presentation/spalsh/splash_view.dart';
 import 'string_manager.dart';
 
@@ -20,9 +24,13 @@ class Routes {
   static const String signUpRoute = "/signUp";
   static const String otpRoute = "/otp";
   static const String newPassRoute = "/newPass";
+  static const String homeRoute = "/home";
   static const String locationRoute = "/location";
   static const String manualLocationRoute = "/manualLocation";
   static const String mainScreenRoute = "/mainScreen";
+  static const String settingsRoute = "/settings";
+  static const String paymentRoute = "/paymentMethod";
+  static const String passwordManagerRoute = "/passwordManager";
 }
 
 class RoutesGenerator {
@@ -34,8 +42,8 @@ class RoutesGenerator {
         return MaterialPageRoute(builder: (_) => const WelcomeView());
       case Routes.onboardingRoute:
         return MaterialPageRoute(builder: (_) => OnBoardingView());
-      // case Routes.homeRoute:
-      //   return MaterialPageRoute(builder: (_) => const HomeView());
+      case Routes.homeRoute:
+        return MaterialPageRoute(builder: (_) => const HomeView());
       case Routes.loginRoute:
         return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.signUpRoute:
@@ -50,12 +58,12 @@ class RoutesGenerator {
         return MaterialPageRoute(builder: (_) => const ManualLocationView());
       case Routes.mainScreenRoute:
         return MaterialPageRoute(builder: (_) => const MainScreen());
-      // case Routes.careemDetailsRoute:
-      //   return MaterialPageRoute(builder: (_) => const CareemDetailsView());
-      // case Routes.kianDetailsRoute:
-      //   return MaterialPageRoute(builder: (_) => const KianDetailsView());
-      // case Routes.providersRoute:
-      //   return MaterialPageRoute(builder: (_) => const ProviderView());
+      case Routes.settingsRoute:
+        return MaterialPageRoute(builder: (_) => const SettingsView());
+      case Routes.paymentRoute:
+        return MaterialPageRoute(builder: (_) => const PaymentMethodView());
+      case Routes.passwordManagerRoute:
+        return MaterialPageRoute(builder: (_) => const PasswordManagerView());
       // case Routes.languageRoute:
       //   return MaterialPageRoute(builder: (_) => const LanguageView());
       // case Routes.helpRoute:

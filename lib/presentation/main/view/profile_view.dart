@@ -1,5 +1,6 @@
 import 'package:fashion/data/resources/assets_manager.dart';
 import 'package:fashion/data/resources/color_manager.dart';
+import 'package:fashion/data/resources/routes_manager.dart';
 import 'package:fashion/data/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -55,7 +56,9 @@ class ProfileView extends StatelessWidget {
                 RowProfileWidget(
                   icon: IconAssets.cardIcon,
                   title: "Payment Methods",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.paymentRoute);
+                  },
                 ),
                 const SizedBox(height: 16),
                 const Divider(),
@@ -71,7 +74,9 @@ class ProfileView extends StatelessWidget {
                 RowProfileWidget(
                   icon: IconAssets.settingIcon,
                   title: "Settings",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.settingsRoute);
+                  },
                 ),
                 const SizedBox(height: 16),
                 const Divider(),
