@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fashion/data/resources/color_manager.dart';
 import 'package:fashion/data/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
@@ -12,11 +13,11 @@ class SelectableContainerList extends StatefulWidget {
 
 class _SelectableContainerListState extends State<SelectableContainerList> {
   List name = [
-    {"title": "All"},
-    {"title": "Newest"},
-    {"title": "Popular"},
-    {"title": "Man"},
-    {"title": "Woman"},
+    {"title": "all".tr()},
+    {"title": "newest".tr()},
+    {"title": "popular".tr()},
+    {"title": "man".tr()},
+    {"title": "woman".tr()},
   ];
   int selectedIndex = 0;
 

@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:fashion/app/app_root.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -31,12 +33,12 @@ class PageViewWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        "New Collection",
+                       Text(
+                        "newCollection".tr(),
                         style: AppTextStyles.largeTitle18,
                       ),
-                      const Text(
-                        "Discount 50% for \nthe first transaction",
+                       Text(
+                        "text5".tr(),
                         style: AppTextStyles.smallTitleGrey12,
                       ),
                       InkWell(
@@ -49,8 +51,8 @@ class PageViewWidget extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                             color: ColorManager.primary,
                           ),
-                          child: const Text(
-                            "Shop Now",
+                          child: Text(
+                            "shopNow".tr(),
                             style: AppTextStyles.smallTitleWhite12,
                           ),
                         ),

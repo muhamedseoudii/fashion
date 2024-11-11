@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:fashion/app/app_root.dart';
 import 'package:fashion/data/resources/assets_manager.dart';
 import 'package:fashion/data/resources/color_manager.dart';
 import 'package:fashion/data/resources/styles_manager.dart';
@@ -50,7 +52,7 @@ class _HomeViewState extends State<HomeView> {
                   const SizedBox(height: 24),
                   const PageViewWidget(),
                   const SizedBox(height: 24),
-                  RowCategoryWidget(title: "Category", onPressed: () {}),
+                  RowCategoryWidget(title: "category".tr(), onPressed: () {}),
                   SizedBox(
                     height: 95,
                     child: ListView.separated(
@@ -78,11 +80,11 @@ class _HomeViewState extends State<HomeView> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text("Flash Sale",
+                      Text("flashSale".tr(),
                           style: AppTextStyles.largeTitle18),
                       Row(
                         children: [
-                          const Text("Closing in : ",
+                          Text("closing".tr(),
                               style: AppTextStyles.smallTitle12),
                           SlideCountdownSeparated(
                             style: AppTextStyles.smallTitleBrown12,

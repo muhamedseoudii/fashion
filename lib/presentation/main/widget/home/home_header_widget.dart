@@ -39,7 +39,7 @@ class _HomeHeaderWidgetState extends State<HomeHeaderWidget> {
                 // Custom Dropdown Button
                 DropdownButton<String>(
                   style: AppTextStyles.mediumTitleBlack14,
-                  hint: Text("Choose a location".tr(),
+                  hint: Text("chooseLocation".tr(),
                       style: AppTextStyles.mediumTitle14),
                   value: selectedLocation,
                   onChanged: (newValue) {

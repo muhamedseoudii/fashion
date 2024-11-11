@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -26,7 +27,7 @@ class SearchBarWidget extends StatelessWidget {
           width: 260,
           child: SearchTextField(
             fillColor: ColorManager.white,
-            hintText: "Search",
+            hintText: "search".tr(),
             controller: searchController,
             onClick: onClickSearch,
             onChange: onChange,

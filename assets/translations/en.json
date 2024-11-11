@@ -53,6 +53,20 @@
   "enterLocation": "Enter Location Manually",
   "enterYourLocation": "Enter Your Location",
   "useCurrentLocation": "Use my current location",
-  "searchResult ": "Search Result"
+  "searchResult ": "Search Result",
+  "location": "Location",
+  "chooseLocation": "Choose a location",
+  "search": "Search",
+  "newCollection": "New Collection",
+  "text5": "Discount 50% for \nthe first transaction",
+  "shopNow": "Shop Now",
+  "category": "Category",
+  "flashSale": "Flash Sale",
+  "closing": "Closing in : ",
+  "all": "All",
+  "newest": "Newest",
+  "popular": "Popular",
+  "man": "Man",
+  "woman": "Woman",
 
 }
