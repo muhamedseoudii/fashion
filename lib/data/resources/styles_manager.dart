@@ -80,7 +80,7 @@ abstract class AppTextStyles {
   static const largeTitleBlack16 = TextStyle(
       fontSize: 16,
       color: Colors.black,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w500,
       overflow: TextOverflow.ellipsis);
   static const largeTitle15 = TextStyle(
       fontSize: 15,

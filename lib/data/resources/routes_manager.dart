@@ -7,8 +7,10 @@ import 'package:fashion/presentation/intro/welcome/welcome_view.dart';
 import 'package:fashion/presentation/location/veiw/location_view.dart';
 import 'package:fashion/presentation/location/veiw/manual_location_view.dart';
 import 'package:fashion/presentation/main/screen/main_screen_view.dart';
+import 'package:fashion/presentation/profile_ui/view/invite_friends_view.dart';
 import 'package:fashion/presentation/profile_ui/view/password_manager_view.dart';
 import 'package:fashion/presentation/profile_ui/view/payment_method_view.dart';
+import 'package:fashion/presentation/profile_ui/view/privacy_view.dart';
 import 'package:fashion/presentation/profile_ui/view/settings_view.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +33,8 @@ class Routes {
   static const String settingsRoute = "/settings";
   static const String paymentRoute = "/paymentMethod";
   static const String passwordManagerRoute = "/passwordManager";
+  static const String privacyRoute = "/privacy";
+  static const String inviteFriendsRoute = "/inviteFriends";
 }
 
 class RoutesGenerator {
@@ -64,10 +68,10 @@ class RoutesGenerator {
         return MaterialPageRoute(builder: (_) => const PaymentMethodView());
       case Routes.passwordManagerRoute:
         return MaterialPageRoute(builder: (_) => const PasswordManagerView());
-      // case Routes.languageRoute:
-      //   return MaterialPageRoute(builder: (_) => const LanguageView());
-      // case Routes.helpRoute:
-      //   return MaterialPageRoute(builder: (_) => const HelpView());
+      case Routes.privacyRoute:
+        return MaterialPageRoute(builder: (_) => const PrivacyView());
+      case Routes.inviteFriendsRoute:
+        return MaterialPageRoute(builder: (_) => const InviteFriendsView());
       default:
         return unDefinedRoute();
     }
