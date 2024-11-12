@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:fashion/app/app_root.dart';
 import 'package:fashion/data/resources/assets_manager.dart';
 import 'package:fashion/data/resources/color_manager.dart';
 import 'package:fashion/data/resources/styles_manager.dart';
@@ -14,8 +16,8 @@ class PaymentMethodView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Payment Methods",
+        title: Text(
+          "paymentMethods".tr(),
         ),
       ),
       body: Padding(
@@ -23,12 +25,12 @@ class PaymentMethodView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Credit & Debit Card",
+             Text("creditCard".tr(),
                 style: AppTextStyles.largeTitle18),
             const SizedBox(height: 12),
             SingleBannerWidget(onTap: () {}),
             const SizedBox(height: 24),
-            const Text("More Payment Options",
+            Text("morePaymentOptions".tr(),
                 style: AppTextStyles.largeTitle18),
             const SizedBox(height: 12),
             MultipleBannerWidget(onTap: () {}),

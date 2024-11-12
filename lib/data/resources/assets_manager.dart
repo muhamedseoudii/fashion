@@ -10,6 +10,7 @@ class ImageAssets {
   static const String facebook = "$imagePath/facebook.png";
   static const String google = "$imagePath/google.png";
   static const String location = "$imagePath/location.png";
+  static const String vector = "$imagePath/vector.png";
 }
 
 class IconAssets {
@@ -40,6 +41,7 @@ class IconAssets {
   static const String keyIcon = "$iconPath/key.svg";
   static const String paypalIcon = "$iconPath/paypal.svg";
   static const String trashIcon = "$iconPath/trash.svg";
+  static const String vectorIcon = "$iconPath/Vector.svg";
 }
 
 class JsonAssets {

@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:fashion/app/app_root.dart';
 import 'package:fashion/data/resources/assets_manager.dart';
 import 'package:fashion/data/resources/color_manager.dart';
 import 'package:fashion/data/resources/routes_manager.dart';
@@ -5,7 +7,6 @@ import 'package:fashion/data/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../component/appbar_widget/appbar_widget.dart';
 import '../widget/profile/row_profile_widget.dart';
 
 class ProfileView extends StatelessWidget {
@@ -15,8 +16,8 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Profile",
+        title: Text(
+          "profile".tr(),
         ),
       ),
       body: Padding(
@@ -47,7 +48,7 @@ class ProfileView extends StatelessWidget {
                 const SizedBox(height: 29),
                 RowProfileWidget(
                   icon: IconAssets.userIcon,
-                  title: "Your profile",
+                  title: "yourProfile".tr(),
                   onTap: () {},
                 ),
                 const SizedBox(height: 16),
@@ -55,7 +56,7 @@ class ProfileView extends StatelessWidget {
                 const SizedBox(height: 16),
                 RowProfileWidget(
                   icon: IconAssets.cardIcon,
-                  title: "Payment Methods",
+                  title: "paymentMethods".tr(),
                   onTap: () {
                     Navigator.pushNamed(context, Routes.paymentRoute);
                   },
@@ -65,7 +66,7 @@ class ProfileView extends StatelessWidget {
                 const SizedBox(height: 16),
                 RowProfileWidget(
                   icon: IconAssets.clipboardTextIcon,
-                  title: "My Orders",
+                  title: "myOrders".tr(),
                   onTap: () {},
                 ),
                 const SizedBox(height: 16),
@@ -73,7 +74,7 @@ class ProfileView extends StatelessWidget {
                 const SizedBox(height: 16),
                 RowProfileWidget(
                   icon: IconAssets.settingIcon,
-                  title: "Settings",
+                  title: "settings".tr(),
                   onTap: () {
                     Navigator.pushNamed(context, Routes.settingsRoute);
                   },
@@ -83,7 +84,7 @@ class ProfileView extends StatelessWidget {
                 const SizedBox(height: 16),
                 RowProfileWidget(
                   icon: IconAssets.infoCircleIcon,
-                  title: "Help Center",
+                  title: "helpCenter".tr(),
                   onTap: () {},
                 ),
                 const SizedBox(height: 16),
@@ -91,7 +92,7 @@ class ProfileView extends StatelessWidget {
                 const SizedBox(height: 16),
                 RowProfileWidget(
                   icon: IconAssets.lockIcon,
-                  title: "Privacy Policy",
+                  title: "privacyPolicy".tr(),
                   onTap: () {},
                 ),
                 const SizedBox(height: 16),
@@ -99,7 +100,7 @@ class ProfileView extends StatelessWidget {
                 const SizedBox(height: 16),
                 RowProfileWidget(
                   icon: IconAssets.profileAddIcon,
-                  title: "Invites Friends",
+                  title: "invitesFriends".tr(),
                   onTap: () {},
                 ),
                 const SizedBox(height: 16),
@@ -107,7 +108,7 @@ class ProfileView extends StatelessWidget {
                 const SizedBox(height: 16),
                 RowProfileWidget(
                   icon: IconAssets.logoutIcon,
-                  title: "Log out",
+                  title: "logout".tr(),
                   onTap: () {},
                 ),
               ],

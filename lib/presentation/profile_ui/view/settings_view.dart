@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:fashion/app/app_root.dart';
 import 'package:flutter/material.dart';
 
 import '../../../data/resources/assets_manager.dart';
@@ -11,8 +13,8 @@ class SettingsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Settings",
+        title: Text(
+          "settings".tr(),
         ),
       ),
       body: Padding(
@@ -21,7 +23,7 @@ class SettingsView extends StatelessWidget {
           children: [
             RowProfileWidget(
               icon: IconAssets.userIcon,
-              title: "Notification Settings",
+              title: "notificationSettings".tr(),
               onTap: () {},
             ),
             const SizedBox(height: 16),
@@ -29,7 +31,7 @@ class SettingsView extends StatelessWidget {
             const SizedBox(height: 16),
             RowProfileWidget(
               icon: IconAssets.keyIcon,
-              title: "Password Manager",
+              title: "passwordManager".tr(),
               onTap: () {
                 Navigator.pushNamed(context, Routes.passwordManagerRoute);
               },
@@ -39,7 +41,7 @@ class SettingsView extends StatelessWidget {
             const SizedBox(height: 16),
             RowProfileWidget(
               icon: IconAssets.trashIcon,
-              title: "Delete Account",
+              title: "deleteAccount".tr(),
               onTap: () {},
             ),
           ],

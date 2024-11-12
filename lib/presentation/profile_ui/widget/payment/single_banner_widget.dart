@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:fashion/app/app_root.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -38,11 +40,11 @@ class SingleBannerWidget extends StatelessWidget {
               children: [
                 SvgPicture.asset(IconAssets.cardFillIcon),
                 const SizedBox(width: 12),
-                const Text("Add New Card",
+                 Text("addCard".tr(),
                     style: AppTextStyles.mediumGreyTitle14),
               ],
             ),
-            const Text("Link", style: AppTextStyles.mediumTitleBrown14),
+             Text("link".tr(), style: AppTextStyles.mediumTitleBrown14),
           ],
         ),
       ),

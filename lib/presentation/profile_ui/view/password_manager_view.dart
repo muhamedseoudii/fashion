@@ -16,8 +16,8 @@ class PasswordManagerView extends StatelessWidget {
     final formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Password Manager",
+        title: Text(
+          "passwordManager".tr(),
         ),
       ),
       body: Padding(
@@ -27,7 +27,7 @@ class PasswordManagerView extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Current Password",
+                 Text("currentPassword".tr(),
                     style: AppTextStyles.smallTitle12),
                 const SizedBox(height: 6),
                 Consumer(
@@ -68,7 +68,7 @@ class PasswordManagerView extends StatelessWidget {
                             onClick: toggleDesignCurr,
                           ),
                           const SizedBox(height: 19),
-                          const Text("New Password",
+                           Text("newPassword".tr(),
                               style: AppTextStyles.smallTitle12),
                           const SizedBox(height: 6),
                           TextFieldEditPass(
@@ -84,7 +84,7 @@ class PasswordManagerView extends StatelessWidget {
                             onClick: toggleDesignPass,
                           ),
                             const SizedBox(height: 19),
-                          const Text("Confirm New Password",
+                           Text("confirmPassword".tr(),
                               style: AppTextStyles.smallTitle12),
                           const SizedBox(height: 6),
                           TextFieldEditPassConfirm(
@@ -103,7 +103,7 @@ class PasswordManagerView extends StatelessWidget {
                           ),
                           const SizedBox(height: 100),
                           FilledButtomEdit(
-                            text: "Change Password".tr(),
+                            text: "changePassword".tr(),
                             textSize: 16,
                             textColor: ColorManager.white,
                             buttonColor: ColorManager.primary,
