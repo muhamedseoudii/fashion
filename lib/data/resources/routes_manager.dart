@@ -7,6 +7,7 @@ import 'package:fashion/presentation/intro/welcome/welcome_view.dart';
 import 'package:fashion/presentation/location/veiw/location_view.dart';
 import 'package:fashion/presentation/location/veiw/manual_location_view.dart';
 import 'package:fashion/presentation/main/screen/main_screen_view.dart';
+import 'package:fashion/presentation/profile_ui/view/help_center_view.dart';
 import 'package:fashion/presentation/profile_ui/view/invite_friends_view.dart';
 import 'package:fashion/presentation/profile_ui/view/password_manager_view.dart';
 import 'package:fashion/presentation/profile_ui/view/payment_method_view.dart';
@@ -35,6 +36,7 @@ class Routes {
   static const String passwordManagerRoute = "/passwordManager";
   static const String privacyRoute = "/privacy";
   static const String inviteFriendsRoute = "/inviteFriends";
+  static const String helpCenterRoute = "/helpCenter";
 }
 
 class RoutesGenerator {
@@ -72,6 +74,8 @@ class RoutesGenerator {
         return MaterialPageRoute(builder: (_) => const PrivacyView());
       case Routes.inviteFriendsRoute:
         return MaterialPageRoute(builder: (_) => const InviteFriendsView());
+      case Routes.helpCenterRoute:
+        return MaterialPageRoute(builder: (_) => const HelpCenterView());
       default:
         return unDefinedRoute();
     }

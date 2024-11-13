@@ -86,7 +86,9 @@ class ProfileView extends StatelessWidget {
                 RowProfileWidget(
                   icon: IconAssets.infoCircleIcon,
                   title: "helpCenter".tr(),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.helpCenterRoute);
+                  },
                 ),
                 const SizedBox(height: 16),
                 const Divider(),
