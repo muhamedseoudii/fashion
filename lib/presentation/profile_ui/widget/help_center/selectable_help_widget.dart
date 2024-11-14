@@ -14,9 +14,9 @@ class SelectableHelpContainerWidget extends StatefulWidget {
 class _SelectableHelpContainerWidgetState extends State<SelectableHelpContainerWidget> {
   List name = [
     {"title": "all".tr()},
-    {"title": "Services".tr()},
-    {"title": "General".tr()},
-    {"title": "Account".tr()},
+    {"title": "services".tr()},
+    {"title": "general".tr()},
+    {"title": "account".tr()},
 
   ];
 

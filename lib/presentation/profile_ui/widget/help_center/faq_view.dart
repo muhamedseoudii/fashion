@@ -44,6 +44,8 @@ class FAQExpansionTile extends StatelessWidget {
       child: Theme(
         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
+          backgroundColor: ColorManager.white,
+          collapsedBackgroundColor:  ColorManager.white,
           iconColor: ColorManager.primary,
           collapsedIconColor: ColorManager.black,
           title: Text(title,

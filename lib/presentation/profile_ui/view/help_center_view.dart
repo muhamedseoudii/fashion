@@ -44,9 +44,9 @@ class HelpCenterView extends StatelessWidget {
                     borderRadius: const BorderRadius.only(topRight: Radius.circular(100),topLeft: Radius.circular(100)),
                     borderSide: BorderSide(color: ColorManager.primary, width: 4.0),
                   ),
-                  tabs: const [
-                Tab(text: 'FAQ'),
-                Tab(text: 'Contact Us'),
+                  tabs:  [
+                Tab(text: 'faq'.tr()),
+                Tab(text: 'contactUs'.tr()),
               ]),
               const Expanded(
                 child: TabBarView(

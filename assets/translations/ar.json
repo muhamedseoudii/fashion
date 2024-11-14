@@ -86,5 +86,12 @@
   "addCard": "إضافة بطاقة جديدة",
   "link": "ربط",
   "notificationSettings": "إعدادات الإشعارات",
-  "deleteAccount": "حذف الحساب"
+  "deleteAccount": "حذف الحساب",
+  "faq": "أسئلة متكرره",
+  "contactUs": "تواصل معنا",
+  "services": "خدمات",
+  "general": "عام",
+  "account": "حسابي"
+
+
 }

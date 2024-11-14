@@ -86,6 +86,11 @@
   "addCard": "Add New Card",
   "link": "Link",
   "notificationSettings": "Notification Settings",
-  "deleteAccount": "Delete Account"
+  "deleteAccount": "Delete Account",
+  "faq": "FAQ",
+  "contactUs": "Contact Us",
+  "services": "Services",
+  "general": "General",
+  "account": "Account"
 
 }
