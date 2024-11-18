@@ -4,6 +4,7 @@ import 'package:fashion/data/resources/assets_manager.dart';
 import 'package:fashion/data/resources/color_manager.dart';
 import 'package:fashion/data/resources/routes_manager.dart';
 import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/component/buttons/button_sheet_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -50,7 +51,9 @@ class ProfileView extends StatelessWidget {
                 RowProfileWidget(
                   icon: IconAssets.userIcon,
                   title: "yourProfile".tr(),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.editProfileRoute);
+                  },
                 ),
                 const SizedBox(height: 16),
                 const Divider(),
@@ -68,7 +71,9 @@ class ProfileView extends StatelessWidget {
                 RowProfileWidget(
                   icon: IconAssets.clipboardTextIcon,
                   title: "myOrders".tr(),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.orderRoute);
+                  },
                 ),
                 const SizedBox(height: 16),
                 const Divider(),
@@ -125,66 +130,12 @@ class ProfileView extends StatelessWidget {
                         ),
                       ),
                       builder: (BuildContext context) {
-                        return Container(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 20, horizontal: 24),
-                          height: 250,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text("logout".tr(),
-                                  style: AppTextStyles.largeTitle16),
-                              const SizedBox(height: 12),
-                              const Divider(),
-                              const SizedBox(height: 12),
-                              Text("Are you sure you want to log out?".tr(),
-                                  style: AppTextStyles.mediumGreyTitle14),
-                              const SizedBox(height: 30),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  SizedBox(
-                                    width: 158,
-                                    height: 48,
-                                    child: OutlinedButton(
-                                      style: OutlinedButton.styleFrom(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(78),
-                                        ),
-                                        side: BorderSide(
-                                          color: ColorManager.primary,
-                                        ),
-                                      ),
-                                      onPressed: () {
-                                        Navigator.pop(
-                                            context); // Close the bottom sheet
-                                      },
-                                      child: const Text(
-                                        "Cancel",
-                                        style: AppTextStyles.mediumTitleBrown14,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 158,
-                                    height: 48,
-                                    child: FilledButtomEdit(
-                                      text: "Yes, Logout",
-                                      textSize: 14,
-                                      textColor: ColorManager.white,
-                                      buttonColor: ColorManager.primary,
-                                      onClick: () {},
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        );
+                        return ButtonSheetWidget(
+                            onClickOK: () {},
+                            title: "logout".tr(),
+                            desc: "text7".tr(),
+                            textCancel: "cancel".tr(),
+                            textOk: "yesLogout".tr());
                       },
                     );
                   },

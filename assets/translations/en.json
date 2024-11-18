@@ -91,6 +91,19 @@
   "contactUs": "Contact Us",
   "services": "Services",
   "general": "General",
-  "account": "Account"
+  "account": "Account",
+  "text6": "Are you sure you want to Delete Your Account?",
+  "cancel": "Cancel",
+  "yesDelete": "Yes, Delete",
+  "text7": "Are you sure you want to log out?",
+  "yesLogout": "Yes, Logout",
+  "active": "Active",
+  "completed": "Completed",
+  "cancelled": "Cancelled",
+  "trackOrder": "Track Order",
+  "leaveReview": "Leave Review",
+  "reOrder": "Re-Order",
+  "seeAll": "See All"
+
 
 }

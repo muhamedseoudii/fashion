@@ -13,7 +13,7 @@ class ContactUsView extends StatelessWidget {
     final List contact = [
       {
         "icon": IconAssets.headphonesIcon,
-        "title": "customerService",
+        "title": "ustomer Service",
         "desc": "19995"
       },
       {

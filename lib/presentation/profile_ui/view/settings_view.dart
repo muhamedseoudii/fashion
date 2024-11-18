@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/app/app_root.dart';
 import 'package:flutter/material.dart';
 
 import '../../../data/resources/assets_manager.dart';
 import '../../../data/resources/routes_manager.dart';
+import '../../component/buttons/button_sheet_widget.dart';
 import '../../main/widget/profile/row_profile_widget.dart';
 
 class SettingsView extends StatelessWidget {
@@ -42,7 +42,24 @@ class SettingsView extends StatelessWidget {
             RowProfileWidget(
               icon: IconAssets.trashIcon,
               title: "deleteAccount".tr(),
-              onTap: () {},
+              onTap: () {
+                showModalBottomSheet(
+                  context: context,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(16),
+                    ),
+                  ),
+                  builder: (BuildContext context) {
+                    return ButtonSheetWidget(
+                        onClickOK: () {},
+                        title: "deleteAccount".tr(),
+                        desc: "text6".tr(),
+                        textCancel: "cancel".tr(),
+                        textOk: "yesDelete".tr());
+                  },
+                );
+              },
             ),
           ],
         ),

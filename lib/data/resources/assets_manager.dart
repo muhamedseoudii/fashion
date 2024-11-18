@@ -48,6 +48,7 @@ class IconAssets {
   static const String twitterIcon = "$iconPath/twitter.svg";
   static const String webIcon = "$iconPath/web.svg";
   static const String whatsappIcon = "$iconPath/whatsapp.svg";
+  static const String personIcon = "$iconPath/person.svg";
 }
 
 class JsonAssets {

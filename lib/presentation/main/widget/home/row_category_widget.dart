@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fashion/data/resources/styles_manager.dart';
 
@@ -17,7 +18,7 @@ class RowCategoryWidget extends StatelessWidget {
             Text(title, style: AppTextStyles.largeTitle18),
             TextButton(
                 onPressed: onPressed,
-                child: const Text("See All",
+                child: Text("seeAll".tr(),
                     style: AppTextStyles.smallTitleBrown12)),
           ],
         ),
