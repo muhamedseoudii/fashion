@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/data/resources/color_manager.dart';
-import 'package:fashion/data/resources/font_manager.dart';
-import 'package:fashion/data/resources/routes_manager.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/font_manager.dart';
+import 'package:fashion/presentation/resources/routes_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../provider/onboarding_provider.dart';

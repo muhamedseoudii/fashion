@@ -1,4 +1,4 @@
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 
 class RowLineSignin extends StatelessWidget {

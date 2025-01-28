@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../data/resources/color_manager.dart';
-import '../../../data/resources/styles_manager.dart';
+import '../../../presentation/resources/color_manager.dart';
+import '../../../presentation/resources/styles_manager.dart';
 import 'buttons_custom_view.dart';
 
 class ButtonSheetWidget extends StatelessWidget {
@@ -58,7 +58,7 @@ class ButtonSheetWidget extends StatelessWidget {
               SizedBox(
                 width: 158,
                 height: 48,
-                child: FilledButtomEdit(
+                child: FilledButtonEdit(
                   text: textOk,
                   textSize: 14,
                   textColor: ColorManager.white,

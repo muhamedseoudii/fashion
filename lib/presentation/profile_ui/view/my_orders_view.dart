@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../../data/resources/color_manager.dart';
-import '../../../data/resources/styles_manager.dart';
+import '../../../presentation/resources/color_manager.dart';
+import '../../../presentation/resources/styles_manager.dart';
 import '../widget/order/active_order_view.dart';
 import '../widget/order/cancelled_order_view.dart';
 import '../widget/order/completed_order_view.dart';

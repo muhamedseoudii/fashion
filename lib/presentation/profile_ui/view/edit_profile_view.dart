@@ -1,14 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../data/resources/assets_manager.dart';
-import '../../../data/resources/color_manager.dart';
+import '../../../presentation/resources/assets_manager.dart';
+import '../../../presentation/resources/color_manager.dart';
 import '../../component/buttons/buttons_custom_view.dart';
 import '../../component/text_buttons/text_field_custom.dart';
 import '../provider/edit_profile_providers.dart';
+import '../widget/edit_profile/custom_dropdown_widget.dart';
 
 class EditProfileView extends StatelessWidget {
   const EditProfileView({super.key});
@@ -19,7 +20,7 @@ class EditProfileView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Edit Profile".tr(),
+          "editProfile".tr(),
         ),
       ),
       body: Padding(
@@ -30,7 +31,7 @@ class EditProfileView extends StatelessWidget {
               children: [
                 Text(
                   textAlign: TextAlign.center,
-                  "Don’t worry, only you can see your personal \ndata. No one else will be able to see it."
+                  "text8"
                       .tr(),
                   style: AppTextStyles.smallTitleGrey12,
                 ),
@@ -62,6 +63,7 @@ class EditProfileView extends StatelessWidget {
                     final genders = ref.watch(gendersProvider);
                     final selectedGender = ref.watch(selectedGenderProvider);
                     return Form(
+                      key: formKey,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -71,20 +73,22 @@ class EditProfileView extends StatelessWidget {
                           ),
                           const SizedBox(height: 5),
                           TextFieldCustomEdit(
+                            radius: 78,
                             controller: editNameController,
                             fillColor: ColorManager.white,
                             validatorText: 'enterName'.tr(),
                           ),
                           const SizedBox(height: 20),
                           Text(
-                            "Phone Number".tr(),
+                            "phoneNumber".tr(),
                             style: AppTextStyles.smallTitle12,
                           ),
                           const SizedBox(height: 5),
                           TextFieldCustomEdit(
+                            radius: 78,
                             controller: editMobileController,
                             fillColor: ColorManager.white,
-                            validatorText: 'enterPhone Number'.tr(),
+                            validatorText: 'enterPhoneNumber'.tr(),
                           ),
                           const SizedBox(height: 20),
                           Text(
@@ -92,68 +96,25 @@ class EditProfileView extends StatelessWidget {
                             style: AppTextStyles.smallTitle12,
                           ),
                           const SizedBox(height: 5),
-                          DropdownButtonFormField<String>(
-                            icon:
-                                const Icon(Icons.keyboard_arrow_down_outlined),
-                            value: selectedGender,
-                            menuMaxHeight: 150,
-                            style: AppTextStyles.mediumTitleBlack14,
-                            dropdownColor: ColorManager.white,
-                            items: genders.map((String gender) {
-                              return DropdownMenuItem<String>(
-                                value: gender,
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 50,),
-                                  child: Text(gender),
-                                ),
-                              );
-                            }).toList(),
-                            onChanged: (value) {
-                              ref.read(selectedGenderProvider.notifier).state =
-                                  value;
-                            },
-                            decoration: InputDecoration(
-                              hintText: "Select Gender",
-                              hintStyle: const TextStyle(
-                                color: Color(0xff9CA3AF),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                              filled: true,
-
-                              fillColor: ColorManager.white,
-                              focusedBorder: const OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(200)),
-                                borderSide: BorderSide(
-                                    color: Color(0xFF704F38), width: 2),
-                              ),
-                              // errorBorder: const OutlineInputBorder(
-                              //   borderRadius: BorderRadius.all(Radius.circular(200)),
-                              //   borderSide: BorderSide(color: Color(0xffFF472B)),
-                              // ),
-                              // focusedErrorBorder: const OutlineInputBorder(
-                              //   borderRadius: BorderRadius.all(Radius.circular(200)),
-                              //   borderSide: BorderSide(color: Color(0xffFF472B), width: 2),
-                              // ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(200),
-                                borderSide:
-                                    const BorderSide(color: Color(0xffD9D9D9)),
-                              ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(200),
-                              ),
-                            ),
+                          CustomDropdownWidget(
+                            hintText: 'selectGender'.tr(),
+                            items: genders,
                             validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please select gender'.tr();
+                              if (selectedGender == null ||
+                                  selectedGender.toString().isEmpty) {
+                                return 'pleaseSelectGender'.tr();
                               }
                               return null;
                             },
+                            onChange: (value) {
+                              if (value != null) {
+                                ref.read(selectedGenderProvider.notifier).state =
+                                    value.toString();
+                              }
+                            },
                           ),
                           const SizedBox(height: 50),
-                          FilledButtomEdit(
+                          FilledButtonEdit(
                             text: "save".tr(),
                             textSize: 16,
                             textColor: ColorManager.white,

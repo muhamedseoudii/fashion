@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/data/resources/color_manager.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 
 class CancelledOrderView extends StatelessWidget {
@@ -12,7 +12,8 @@ class CancelledOrderView extends StatelessWidget {
       return SizedBox(
         width: double.infinity,
         height: 100,
-        child: LayoutBuilder(
+        child:
+        LayoutBuilder(
           builder: (context, constraints) {
             final screenWidth = constraints.maxWidth;
             return Row(

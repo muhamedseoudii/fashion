@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/app/app_root.dart';
-import 'package:fashion/data/resources/assets_manager.dart';
-import 'package:fashion/data/resources/color_manager.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/assets_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/routes_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -24,6 +24,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   List<bool> selectedItems = List.generate(4, (index) => false);
+
   @override
   Widget build(BuildContext context) {
     final List category = [
@@ -46,7 +47,9 @@ class _HomeViewState extends State<HomeView> {
                   SearchBarWidget(
                     searchController: searchController,
                     onChange: (p0) {},
-                    onClickSearch: () {},
+                    onClickSearch: () {
+                      Navigator.pushNamed(context, Routes.searchRoute);
+                    },
                     onTapFilter: () {},
                   ),
                   const SizedBox(height: 24),
@@ -61,7 +64,7 @@ class _HomeViewState extends State<HomeView> {
                           return Column(
                             children: [
                               CircleAvatar(
-                                  backgroundColor: ColorManager.secandary,
+                                  backgroundColor: ColorManager.secondary,
                                   radius: 30,
                                   child: SvgPicture.asset(
                                       category[index]["icons"])),
@@ -80,8 +83,7 @@ class _HomeViewState extends State<HomeView> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("flashSale".tr(),
-                          style: AppTextStyles.largeTitle18),
+                      Text("flashSale".tr(), style: AppTextStyles.largeTitle18),
                       Row(
                         children: [
                           Text("closing".tr(),
@@ -89,7 +91,7 @@ class _HomeViewState extends State<HomeView> {
                           SlideCountdownSeparated(
                             style: AppTextStyles.smallTitleBrown12,
                             decoration: BoxDecoration(
-                              color: ColorManager.secandary,
+                              color: ColorManager.secondary,
                               borderRadius: const BorderRadius.all(
                                   Radius.circular(
                                       4)), // Apply border radius separately
@@ -106,29 +108,32 @@ class _HomeViewState extends State<HomeView> {
                   SizedBox(
                     height: 500,
                     child: GridView.builder(
-                      itemCount: 4, // Set length of grid to 4 items
+                      itemCount: 4,
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        // Number of columns in the grid
                         childAspectRatio: 0.75,
-                        // Adjust the aspect ratio as needed
-                        crossAxisSpacing: 8,
+                        crossAxisSpacing: 15,
                         mainAxisSpacing: 8,
                       ),
                       itemBuilder: (context, index) {
-                        return GridItemsWidget(
-                          type: "Brown Jacket",
-                          price: "\$120.00",
-                          rate: "4.9",
-                          icon: selectedItems[index]
-                              ? CupertinoIcons.heart_fill
-                              : CupertinoIcons.heart,
-                          onTapFavorite: () {
-                            setState(() {
-                              selectedItems[index] = !selectedItems[index];
-                            });
+                        return InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, Routes.categoryProductRoute);
                           },
+                          child: GridItemsWidget(
+                            type: "Brown Jacket",
+                            price: "\$120.00",
+                            rate: "4.9",
+                            icon: selectedItems[index]
+                                ? CupertinoIcons.heart_fill
+                                : CupertinoIcons.heart,
+                            onTapFavorite: () {
+                              setState(() {
+                                selectedItems[index] = !selectedItems[index];
+                              });
+                            },
+                          ),
                         );
                       },
                     ),

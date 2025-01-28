@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../../data/resources/assets_manager.dart';
-import '../../../data/resources/routes_manager.dart';
+import '../../../presentation/resources/assets_manager.dart';
+import '../../../presentation/resources/routes_manager.dart';
 import '../../component/buttons/button_sheet_widget.dart';
 import '../../main/widget/profile/row_profile_widget.dart';
 

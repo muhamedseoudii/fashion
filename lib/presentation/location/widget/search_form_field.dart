@@ -1,5 +1,5 @@
-import 'package:fashion/data/resources/assets_manager.dart';
-import 'package:fashion/data/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/assets_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -24,6 +24,7 @@ class SearchTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      onTap: onClick,
       keyboardType: TextInputType.text,
       onChanged: onChange,
       cursorColor: ColorManager.primary,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../data/resources/assets_manager.dart';
-import '../../../../data/resources/color_manager.dart';
-import '../../../../data/resources/styles_manager.dart';
+import '../../../../presentation/resources/assets_manager.dart';
+import '../../../../presentation/resources/color_manager.dart';
+import '../../../../presentation/resources/styles_manager.dart';
 
 class GridItemsWidget extends StatelessWidget {
   final String type, rate, price;
@@ -19,43 +19,51 @@ class GridItemsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 156,height: 200,
-      child: Card(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-              alignment: Alignment.topRight,
-              height: 150,
-              decoration: BoxDecoration(
-                  color: ColorManager.grey1,
-                  borderRadius: const BorderRadius.all(Radius.circular(8))),
-              child: CircleAvatar(
-                radius: 20,
-                backgroundColor: ColorManager.offWhite,
-                child: InkWell(
-                    onTap: onTapFavorite,
-                    child: Icon(icon,color: ColorManager.primary,)),
-              ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          flex: 4,
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            alignment: Alignment.topRight,
+            height: 50,  // This container takes 150 height
+            decoration: BoxDecoration(
+                color: ColorManager.grey1,
+                borderRadius: const BorderRadius.all(Radius.circular(8))),
+            child: CircleAvatar(
+              radius: 20,
+              backgroundColor: ColorManager.offWhite,
+              child: InkWell(
+                  onTap: onTapFavorite,
+                  child: Icon(icon, color: ColorManager.primary)),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(type, style: AppTextStyles.mediumTitle14),
-                Row(
-                  children: [
-                    SvgPicture.asset(IconAssets.starIcon),
-                    Text(rate, style: AppTextStyles.smallTitleGrey12),
-                  ],
-                ),
-              ],
-            ),
-            Text(price, style: AppTextStyles.mediumTitle14),
-          ],
+          ),
         ),
-      ),
+        SizedBox(height: 8),
+        Expanded(
+          flex: 1,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(type, style: AppTextStyles.mediumTitle14),
+                  Row(
+                    children: [
+                      SvgPicture.asset(IconAssets.starIcon),
+                      Text(rate, style: AppTextStyles.smallTitleGrey12),
+                    ],
+                  ),
+                ],
+              ),
+              Text(price, style: AppTextStyles.mediumTitle14),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/data/resources/assets_manager.dart';
-import 'package:fashion/data/resources/color_manager.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/assets_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:fashion/presentation/component/buttons/buttons_custom_view.dart';
 import 'package:fashion/presentation/component/text_buttons/text_field_custom.dart';
 import 'package:flutter/material.dart';
@@ -77,6 +77,7 @@ class CreateAccountView extends StatelessWidget {
                             ),
                             const SizedBox(height: 5),
                             TextFieldCustomEdit(
+                              radius: 78,
                               controller: nameController,
                               fillColor: ColorManager.white,
                               validatorText: 'enterName'.tr(),
@@ -88,6 +89,7 @@ class CreateAccountView extends StatelessWidget {
                             ),
                             const SizedBox(height: 5),
                             TextFieldCustomEdit(
+                              radius: 78,
                               controller: emailController,
                               fillColor: ColorManager.white,
                               validatorText: 'enterEmail'.tr(),
@@ -151,7 +153,7 @@ class CreateAccountView extends StatelessWidget {
                                     color: Color(0xffFF472B), fontSize: 12),
                               ),
                             const SizedBox(height: 20),
-                            FilledButtomEdit(
+                            FilledButtonEdit(
                               text: "signUp".tr(),
                               textSize: 16,
                               textColor: ColorManager.white,

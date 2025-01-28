@@ -1,5 +1,5 @@
-import 'package:fashion/data/resources/color_manager.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:fashion/presentation/profile_ui/widget/help_center/selectable_help_widget.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,4 @@
-import 'package:fashion/data/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 
 import 'font_manager.dart';
@@ -25,6 +25,7 @@ ThemeData getApplicationTheme() {
     //appBar theme
     appBarTheme: AppBarTheme(
       // iconTheme: const IconThemeData(color: Colors.white),
+
       toolbarHeight: 90,
       centerTitle: true,
       color: ColorManager.white,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../data/resources/styles_manager.dart';
+import '../../../../presentation/resources/styles_manager.dart';
 
 class RowProfileWidget extends StatelessWidget {
   final String icon, title;

@@ -16,7 +16,7 @@ abstract class AppTextStyles {
   static const largeTitle23White =
       TextStyle(color: Colors.white, fontSize: 23, fontWeight: FontWeight.w700);
   static const largeTitle22 =
-      TextStyle(fontSize: 22, fontWeight: FontWeight.w500);
+      TextStyle(fontSize: 22, fontWeight: FontWeight.w600);
   static const largeTitleBrown22 = TextStyle(
       fontSize: 22, fontWeight: FontWeight.w600, color: Color(0xff704F38));
   static const largeTitleGrey21 = TextStyle(
@@ -33,6 +33,7 @@ abstract class AppTextStyles {
       TextStyle(fontSize: 30, fontWeight: FontWeight.w700, color: Colors.white);
   static const largeTitleBlack22 =
       TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: Colors.black);
+
   static const largeTitleWhite20 =
       TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white);
   static const largeTitleDarkBlue21 = TextStyle(
@@ -68,7 +69,7 @@ abstract class AppTextStyles {
       fontSize: 16, fontWeight: FontWeight.w500, color: Color(0xff704F38));
   static const largeTitle16 = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
   );
   static const largeTitleBlack17 = TextStyle(
     color: Colors.black,
@@ -93,7 +94,7 @@ abstract class AppTextStyles {
       overflow: TextOverflow.ellipsis);
   static const largeTitleWhite16 = TextStyle(
       fontSize: 16,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
       color: Colors.white,
       overflow: TextOverflow.ellipsis);
   static const largeTitleLineThrough16 = TextStyle(
@@ -125,7 +126,7 @@ abstract class AppTextStyles {
   static const mediumGreyTitle14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w500,
-    color: Color(0xff8A8A8E),
+    color: Color(0xff797979),
     overflow: TextOverflow.fade,
   );
   static const mediumWhiteTitle14 = TextStyle(
@@ -137,12 +138,12 @@ abstract class AppTextStyles {
 
   static const mediumTitle14 = TextStyle(
     fontSize: 14,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
   );
   static const mediumTitleBrown14 = TextStyle(
     fontSize: 14,
     color: Color(0xff704F38),
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w400,
   );
   static const mediumTitleLime14 = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xff00FF7F));
@@ -174,7 +175,7 @@ abstract class AppTextStyles {
   static const smallTitleWhite12 = TextStyle(
     color: Colors.white,
     fontSize: 12,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
   );
   static const smallTitleBrown12 = TextStyle(
     color: Color(0xff704F38),

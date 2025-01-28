@@ -1,9 +1,9 @@
-import 'package:fashion/data/resources/assets_manager.dart';
+import 'package:fashion/presentation/resources/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../data/resources/color_manager.dart';
-import '../../../../data/resources/styles_manager.dart';
+import '../../../../presentation/resources/color_manager.dart';
+import '../../../../presentation/resources/styles_manager.dart';
 
 class ContactUsView extends StatelessWidget {
   const ContactUsView({super.key});

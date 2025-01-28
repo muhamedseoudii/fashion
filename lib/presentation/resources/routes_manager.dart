@@ -2,6 +2,16 @@ import 'package:fashion/presentation/auth/view/create_account_view.dart';
 import 'package:fashion/presentation/auth/view/login_view.dart';
 import 'package:fashion/presentation/auth/view/new_password_view.dart';
 import 'package:fashion/presentation/auth/view/otp_view.dart';
+import 'package:fashion/presentation/category_product/view/add_card_view.dart';
+import 'package:fashion/presentation/category_product/view/category_product_view.dart';
+import 'package:fashion/presentation/category_product/view/checkout_payment_view.dart';
+import 'package:fashion/presentation/category_product/view/checkout_view.dart';
+import 'package:fashion/presentation/category_product/view/choosing_shipping_view.dart';
+import 'package:fashion/presentation/category_product/view/coupons_view.dart';
+import 'package:fashion/presentation/category_product/view/order_review_view.dart';
+import 'package:fashion/presentation/category_product/view/payment_success_view.dart';
+import 'package:fashion/presentation/category_product/view/shipping_address_view.dart';
+import 'package:fashion/presentation/category_product/view/track_order_view.dart';
 import 'package:fashion/presentation/intro/onboarding/view/onboarding_view.dart';
 import 'package:fashion/presentation/intro/welcome/welcome_view.dart';
 import 'package:fashion/presentation/location/veiw/location_view.dart';
@@ -15,6 +25,7 @@ import 'package:fashion/presentation/profile_ui/view/password_manager_view.dart'
 import 'package:fashion/presentation/profile_ui/view/payment_method_view.dart';
 import 'package:fashion/presentation/profile_ui/view/privacy_view.dart';
 import 'package:fashion/presentation/profile_ui/view/settings_view.dart';
+import 'package:fashion/presentation/search/view/search_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../presentation/main/view/home_view.dart';
@@ -41,6 +52,17 @@ class Routes {
   static const String helpCenterRoute = "/helpCenter";
   static const String orderRoute = "/order";
   static const String editProfileRoute = "/editProfile";
+  static const String categoryProductRoute = "/categoryProduct";
+  static const String searchRoute = "/search";
+  static const String checkoutRoute = "/checkout";
+  static const String shippingAddressRoute = "/shippingAddress";
+  static const String chooseShippingRoute = "/chooseShipping";
+  static const String checkoutPaymentRoute = "/CheckoutPayment";
+  static const String addCardRoute = "/addCard";
+  static const String paymentSuccessRoute = "/paymentSuccess";
+  static const String couponsRoute = "/coupons";
+  static const String trackOrderRoute = "/trackOrder";
+  static const String leaveReviewRoute = "/leaveReview";
 }
 
 class RoutesGenerator {
@@ -84,6 +106,28 @@ class RoutesGenerator {
         return MaterialPageRoute(builder: (_) => const MyOrdersView());
       case Routes.editProfileRoute:
         return MaterialPageRoute(builder: (_) => const EditProfileView());
+      case Routes.categoryProductRoute:
+        return MaterialPageRoute(builder: (_) => const CategoryProductView());
+      case Routes.searchRoute:
+        return MaterialPageRoute(builder: (_) => const SearchView());
+      case Routes.checkoutRoute:
+        return MaterialPageRoute(builder: (_) => const CheckoutView());
+      case Routes.shippingAddressRoute:
+        return MaterialPageRoute(builder: (_) => const ShippingAddressView());
+      case Routes.chooseShippingRoute:
+        return MaterialPageRoute(builder: (_) => const ChoosingShippingView());
+      case Routes.checkoutPaymentRoute:
+        return MaterialPageRoute(builder: (_) => const CheckoutPaymentView());
+      case Routes.addCardRoute:
+        return MaterialPageRoute(builder: (_) => const AddCardView());
+      case Routes.paymentSuccessRoute:
+        return MaterialPageRoute(builder: (_) => const PaymentSuccessView());
+      case Routes.couponsRoute:
+        return MaterialPageRoute(builder: (_) => const CouponsView());
+      case Routes.trackOrderRoute:
+        return MaterialPageRoute(builder: (_) => const TrackOrderView());
+      case Routes.leaveReviewRoute:
+        return MaterialPageRoute(builder: (_) => const OrderReviewView());
       default:
         return unDefinedRoute();
     }

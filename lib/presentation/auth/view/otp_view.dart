@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/data/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
 import 'package:fashion/presentation/auth/widget/pinput_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../../../data/resources/styles_manager.dart';
+import '../../../presentation/resources/styles_manager.dart';
 
 class OtpView extends StatelessWidget {
   const OtpView({super.key});

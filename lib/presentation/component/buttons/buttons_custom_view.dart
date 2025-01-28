@@ -1,14 +1,14 @@
-import 'package:fashion/data/resources/color_manager.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 
-class FilledButtomEdit extends StatelessWidget {
+class FilledButtonEdit extends StatelessWidget {
   final String text;
   final Color buttonColor, textColor;
   final double textSize;
   final void Function()? onClick;
 
-  const FilledButtomEdit({
+  const FilledButtonEdit({
     super.key,
     required this.text,
     required this.buttonColor,
@@ -42,21 +42,22 @@ class FilledButtomEdit extends StatelessWidget {
   }
 }
 
-class FilledButtomWithIconEdit extends StatelessWidget {
+class FilledButtonWithIconEdit extends StatelessWidget {
   final String text;
   final Color buttonColor, textColor;
   final double textSize;
   final Widget widget;
   final void Function()? onClick;
+  final double width,height;
 
-  const FilledButtomWithIconEdit({
+  const FilledButtonWithIconEdit({
     super.key,
     required this.text,
     required this.buttonColor,
     required this.textSize,
     required this.textColor,
     required this.onClick,
-    required this.widget,
+    required this.widget, required this.width, required this.height,
   });
 
   @override
@@ -67,11 +68,13 @@ class FilledButtomWithIconEdit extends StatelessWidget {
         style: FilledButton.styleFrom(
           // side: const BorderSide(color: Color(0xffD8DADC)),
           backgroundColor: buttonColor,
-          minimumSize: const Size(377, 60),
+          minimumSize:  Size(width, height),
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
           children: [
+            widget,
+            SizedBox(width: 10),
             Text(
               text,
               style: TextStyle(
@@ -80,7 +83,7 @@ class FilledButtomWithIconEdit extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
             ),
-            widget,
+
           ],
         ),
       ),
@@ -88,12 +91,12 @@ class FilledButtomWithIconEdit extends StatelessWidget {
   }
 }
 
-class ElevatedButtomEdit extends StatelessWidget {
+class ElevatedButtonEdit extends StatelessWidget {
   final String text;
   final double buttonHeight, buttonWidth;
   final void Function()? onClick;
 
-  const ElevatedButtomEdit({
+  const ElevatedButtonEdit({
     super.key,
     required this.text,
     required this.onClick,

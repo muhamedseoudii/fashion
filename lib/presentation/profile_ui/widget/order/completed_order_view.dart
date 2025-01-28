@@ -1,7 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/data/resources/color_manager.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
+
+import '../../../resources/routes_manager.dart';
 
 class CompletedOrderView extends StatelessWidget {
   const CompletedOrderView({super.key});
@@ -64,18 +66,23 @@ class CompletedOrderView extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        alignment: Alignment.center,
-                        width: screenWidth * 0.30,
-                        height: 30,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(78),
-                          color: ColorManager.primary,
-                        ),
-                        child: Text(
-                          "leaveReview".tr(),
-                          style: AppTextStyles.mediumTitleWhite14,
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, Routes.leaveReviewRoute);
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 5),
+                          alignment: Alignment.center,
+                          width: screenWidth * 0.30,
+                          height: 30,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(78),
+                            color: ColorManager.primary,
+                          ),
+                          child: Text(
+                            "leaveReview".tr(),
+                            style: AppTextStyles.mediumTitleWhite14,
+                          ),
                         ),
                       ),
                     ],

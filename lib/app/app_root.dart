@@ -1,8 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/data/resources/routes_manager.dart';
-import 'package:fashion/data/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../presentation/resources/routes_manager.dart';
+import '../presentation/resources/theme_manager.dart';
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});

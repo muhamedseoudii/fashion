@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/data/resources/color_manager.dart';
-import 'package:fashion/data/resources/routes_manager.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/routes_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:fashion/presentation/auth/provider/otp_timer_notifier.dart';
 import 'package:fashion/presentation/component/buttons/buttons_custom_view.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +45,7 @@ class _PinputCustomState extends State<PinputCustom> {
   Widget build(BuildContext context) {
     final focusedBorderColor = ColorManager.primary;
     final fillColor = ColorManager.white;
-    final borderColor = ColorManager.secandary;
+    final borderColor = ColorManager.secondary;
 
     final defaultPinTheme = PinTheme(
       width: 57,
@@ -188,7 +188,7 @@ class _PinputCustomState extends State<PinputCustom> {
             ],
           ),
           const SizedBox(height: 32),
-          FilledButtomEdit(
+          FilledButtonEdit(
             text: "verify".tr(),
             textSize: 16,
             textColor: ColorManager.white,

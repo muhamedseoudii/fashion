@@ -1,4 +1,4 @@
-import 'package:fashion/data/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
 import 'package:fashion/presentation/main/view/cart_view.dart';
 import 'package:fashion/presentation/main/view/home_view.dart';
 import 'package:fashion/presentation/main/view/messaging_view.dart';

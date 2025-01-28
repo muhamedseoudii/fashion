@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/data/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldCustomEdit extends StatelessWidget {
@@ -10,6 +10,7 @@ class TextFieldCustomEdit extends StatelessWidget {
   final Widget? suffixIcon;
   final Widget? prefixIcon;
   final int? maxLines;
+  final double radius;
   final Color? fillColor;
   final TextStyle? style;
   final void Function()? onTap;
@@ -28,7 +29,7 @@ class TextFieldCustomEdit extends StatelessWidget {
       this.fillColor,
       this.style,
       this.onTap,
-      this.readOnly = false});
+      this.readOnly = false, required this.radius});
 
   @override
   Widget build(BuildContext context) {
@@ -58,20 +59,20 @@ class TextFieldCustomEdit extends StatelessWidget {
         prefixIcon: prefixIcon,
         fillColor: fillColor,
         filled: true,
-        focusedBorder: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(200)),
+        focusedBorder:  OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(radius)),
           borderSide: BorderSide(color: Color(0xFF704F38), width: 2),
         ),
-        errorBorder: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(200)),
+        errorBorder:  OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(radius)),
           borderSide: BorderSide(color: Color(0xffFF472B)),
         ),
-        focusedErrorBorder: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(200)),
+        focusedErrorBorder:  OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(radius)),
           borderSide: BorderSide(color: Color(0xffFF472B), width: 2),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(200),
+          borderRadius: BorderRadius.circular(radius),
           borderSide: const BorderSide(color: Color(0xffD9D9D9)),
         ),
       ),

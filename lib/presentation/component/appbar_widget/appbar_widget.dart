@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../data/resources/color_manager.dart';
-import '../../../data/resources/styles_manager.dart';
+import '../../../presentation/resources/color_manager.dart';
+import '../../../presentation/resources/styles_manager.dart';
 
 class AppbarWidget extends StatelessWidget {
   final String title;

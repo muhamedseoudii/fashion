@@ -4,8 +4,8 @@ import 'package:fashion/presentation/profile_ui/provider/password_manager_provid
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../data/resources/color_manager.dart';
-import '../../../data/resources/styles_manager.dart';
+import '../../../presentation/resources/color_manager.dart';
+import '../../../presentation/resources/styles_manager.dart';
 import '../../component/buttons/buttons_custom_view.dart';
 
 class PasswordManagerView extends StatelessWidget {
@@ -102,7 +102,7 @@ class PasswordManagerView extends StatelessWidget {
                             onClick: toggleDesignConfirmPass,
                           ),
                           const SizedBox(height: 100),
-                          FilledButtomEdit(
+                          FilledButtonEdit(
                             text: "changePassword".tr(),
                             textSize: 16,
                             textColor: ColorManager.white,

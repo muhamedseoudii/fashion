@@ -1,6 +1,6 @@
-import 'package:fashion/data/resources/color_manager.dart';
-import 'package:fashion/data/resources/font_manager.dart';
-import 'package:fashion/data/resources/styles_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/font_manager.dart';
+import 'package:fashion/presentation/resources/styles_manager.dart';
 import 'package:flutter/material.dart';
 
 class RowQuestionWidget extends StatelessWidget {

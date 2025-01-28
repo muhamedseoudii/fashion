@@ -11,6 +11,7 @@ class ImageAssets {
   static const String google = "$imagePath/google.png";
   static const String location = "$imagePath/location.png";
   static const String vector = "$imagePath/vector.png";
+  static const String check = "$imagePath/check.png";
 }
 
 class IconAssets {
@@ -49,6 +50,12 @@ class IconAssets {
   static const String webIcon = "$iconPath/web.svg";
   static const String whatsappIcon = "$iconPath/whatsapp.svg";
   static const String personIcon = "$iconPath/person.svg";
+  static const String arrowBackCircleIcon = "$iconPath/arrowBackCircle.svg";
+  static const String checkActiveIcon = "$iconPath/checkActive.svg";
+  static const String checkInActiveIcon = "$iconPath/checkInActive.svg";
+  static const String lineActiveIcon = "$iconPath/lineActive.svg";
+  static const String lineInActiveIcon = "$iconPath/lineInActive.svg";
+  static const String cameraIcon = "$iconPath/camera.svg";
 }
 
 class JsonAssets {

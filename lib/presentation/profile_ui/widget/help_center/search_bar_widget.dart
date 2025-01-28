@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../data/resources/color_manager.dart';
+import '../../../../presentation/resources/color_manager.dart';
 
 class SearchBarHelpWidget extends StatelessWidget {
   final String image;

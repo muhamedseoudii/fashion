@@ -1,12 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fashion/app/app_root.dart';
-import 'package:fashion/data/resources/assets_manager.dart';
+import 'package:fashion/presentation/resources/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../../data/resources/color_manager.dart';
-import '../../../../data/resources/styles_manager.dart';
+import '../../../../presentation/resources/color_manager.dart';
+import '../../../../presentation/resources/styles_manager.dart';
 
 class PageViewWidget extends StatelessWidget {
   const PageViewWidget({super.key});
@@ -32,7 +31,7 @@ class PageViewWidget extends StatelessWidget {
                           horizontal: 24, vertical: 24),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        color: ColorManager.secandary,
+                        color: ColorManager.secondary,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

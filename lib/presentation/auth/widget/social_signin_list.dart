@@ -1,4 +1,4 @@
-import 'package:fashion/data/resources/color_manager.dart';
+import 'package:fashion/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 
 class SocialSigninList extends StatelessWidget {
