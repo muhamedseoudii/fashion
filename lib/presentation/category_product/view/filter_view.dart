@@ -31,6 +31,7 @@ class FilterViewState extends State<FilterView> {
     {"title": "0 - 1 "},
   ];
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,12 +83,14 @@ class FilterViewState extends State<FilterView> {
                 showLabels: true,
                 enableTooltip: false,
                 dragMode: SliderDragMode.onThumb,
-                onChanged: (SfRangeValues values) {
+                onChanged: (SfRangeValues newValues) {
                   setState(() {
-                    values = values;
+                    values = newValues; // Corrected here
                   });
+                  // print("The new Rangers is $newValues");
                 },
               ),
+
               SizedBox(height: 24),
               Text("Reviews", style: AppTextStyles.largeTitle18),
               // SizedBox(height: 12),
@@ -105,9 +108,9 @@ class FilterViewState extends State<FilterView> {
                             activeColor: ColorManager.primary,
                             value: reviews[index]["title"],
                             groupValue: selectedAddress,
-                            onChanged: (value) {
+                            onChanged: (newValues) {
                               setState(() {
-                                selectedAddress = value!;
+                                selectedAddress = newValues!;
                               });
                             },
                           ),
