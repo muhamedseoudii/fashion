@@ -1,14 +1,12 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:fashion/presentation/category_product/widget/order_review/order_review_widget.dart';
+import 'package:fashion/presentation/category_product/widget/order_review/scrollable_bottomsheet_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../component/buttons/buttons_custom_view.dart';
 import '../../component/text_buttons/text_field_custom.dart';
 import '../../resources/assets_manager.dart';
 import '../../resources/color_manager.dart';
-import '../../resources/routes_manager.dart';
 import '../../resources/styles_manager.dart';
 
 class OrderReviewView extends StatelessWidget {
@@ -107,65 +105,18 @@ class OrderReviewView extends StatelessWidget {
         bottomSheet: DraggableScrollableSheet(
           expand: false,
           snap: true,
-          snapSizes: [0.12, 0.13],
-          initialChildSize: 0.12,
-          minChildSize: 0.12,
+          snapSizes: [0.13, 0.14],
+          initialChildSize: 0.13,
+          minChildSize: 0.13,
           // maxChildSize: 0.3,
           builder: (context, scrollController) {
-            return Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                      color: ColorManager.grey,
-                      offset: Offset(30, 0),
-                      blurRadius: 26,
-                      blurStyle: BlurStyle.outer,
-                     )
-                ],
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(25),
-                  topRight: Radius.circular(25),
-                ),
-                color: ColorManager.white,
-              ),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: 170,
-                      height: 48,
-                      child: FilledButtonEdit(
-                        text: "Cancel",
-                        textSize: 16,
-                        textColor: ColorManager.primary,
-                        buttonColor: ColorManager.grey,
-                        onClick: () {
-                          Navigator.pushNamed(context, Routes.trackOrderRoute);
-                          // Navigator.pushNamed(context, Routes.checkoutPaymentRoute);
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      width: 170,
-                      height: 48,
-                      child: FilledButtonEdit(
-                        text: "Submit",
-                        textSize: 16,
-                        textColor: ColorManager.white,
-                        buttonColor: ColorManager.primary,
-                        onClick: () {
-                          Navigator.pushNamed(context, Routes.trackOrderRoute);
-                          // Navigator.pushNamed(context, Routes.checkoutPaymentRoute);
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            return ScrollableBottomSheetWidget(
+              leftText: "Cancel",
+              rightText: "Submit",
+              onSubmit: () {},
+              onCancel: () {
+                Navigator.pop(context);
+              },
             );
           },
         ));

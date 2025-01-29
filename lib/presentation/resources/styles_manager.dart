@@ -39,7 +39,7 @@ abstract class AppTextStyles {
   static const largeTitleDarkBlue21 = TextStyle(
       fontSize: 21.61, fontWeight: FontWeight.w700, color: Color(0xff1A2C42));
   static const largeTitle18 =
-      TextStyle(fontSize: 18, fontWeight: FontWeight.w500);
+      TextStyle(fontSize: 18, fontWeight: FontWeight.w600);
   static const largeTitleNavy18 = TextStyle(
       fontSize: 18, color: Color(0xff1A2C42), fontWeight: FontWeight.w700);
   static const largeTitleBlack18 =

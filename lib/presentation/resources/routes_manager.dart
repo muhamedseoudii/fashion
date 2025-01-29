@@ -8,6 +8,7 @@ import 'package:fashion/presentation/category_product/view/checkout_payment_view
 import 'package:fashion/presentation/category_product/view/checkout_view.dart';
 import 'package:fashion/presentation/category_product/view/choosing_shipping_view.dart';
 import 'package:fashion/presentation/category_product/view/coupons_view.dart';
+import 'package:fashion/presentation/category_product/view/filter_view.dart';
 import 'package:fashion/presentation/category_product/view/order_review_view.dart';
 import 'package:fashion/presentation/category_product/view/payment_success_view.dart';
 import 'package:fashion/presentation/category_product/view/shipping_address_view.dart';
@@ -63,6 +64,7 @@ class Routes {
   static const String couponsRoute = "/coupons";
   static const String trackOrderRoute = "/trackOrder";
   static const String leaveReviewRoute = "/leaveReview";
+  static const String filterRoute = "/filter";
 }
 
 class RoutesGenerator {
@@ -128,6 +130,8 @@ class RoutesGenerator {
         return MaterialPageRoute(builder: (_) => const TrackOrderView());
       case Routes.leaveReviewRoute:
         return MaterialPageRoute(builder: (_) => const OrderReviewView());
+      case Routes.filterRoute:
+        return MaterialPageRoute(builder: (_) => const FilterView());
       default:
         return unDefinedRoute();
     }

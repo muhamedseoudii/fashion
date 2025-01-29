@@ -50,7 +50,9 @@ class _HomeViewState extends State<HomeView> {
                     onClickSearch: () {
                       Navigator.pushNamed(context, Routes.searchRoute);
                     },
-                    onTapFilter: () {},
+                    onTapFilter: () {
+                      Navigator.pushNamed(context, Routes.filterRoute);
+                    },
                   ),
                   const SizedBox(height: 24),
                   const PageViewWidget(),
